@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     color:white;
-
+    z-index: 1;
     &__box{
         min-width: 500px;
         background-color: red;
@@ -51,7 +51,7 @@
     &__text{
         text-align: center;
         white-space: pre-wrap;
-        padding: 40px
+        padding: 40px;
         
     }
     &__buttonGroup{

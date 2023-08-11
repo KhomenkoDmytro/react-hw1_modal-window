@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Футболка з логотипом",
+    "price": 25.99,
+    "image": "productImages/t-shirt.jpg",
+    "id": "123456789",
+    "color": "червоний"
+  },
+  {
+    "name": "Джинсові штани",
+    "price": 39.99,
+    "image": "productImages/pants.jpg",
+    "id": "987654321",
+    "color": "синій"
+  },
+  {
+    "name": "Кросівки",
+    "price": 59.99,
+    "image": "productImages/sneakers.webp",
+    "id": "456789123",
+    "color": "чорний"
+  },
+  {
+    "name": "Сукня в горошок",
+    "price": 49.99,
+    "image": "productImages/dress-with-polka-dots.jpg",
+    "id": "789123456",
+    "color": "білий"
+  },
+  {
+    "name": "Куртка з капюшоном",
+    "price": 79.99,
+    "image": "productImages/jacket.jpg",
+    "id": "654321987",
+    "color": "зелений"
+  },
+  {
+    "name": "Шапка-бейсболка",
+    "price": 12.99,
+    "image": "productImages/baseball-cap.jpg",
+    "id": "321987654",
+    "color": "сірий"
+  },
+  {
+    "name": "Спортивний рюкзак",
+    "price": 29.99,
+    "image": "productImages/backpack.webp",
+    "id": "987123654",
+    "color": "синій"
+  },
+  {
+    "name": "Ремінь шкіряний",
+    "price": 19.99,
+    "image": "productImages/belt.webp",
+    "id": "741852963",
+    "color": "коричневий"
+  },
+  {
+    "name": "Сонцезахисні окуляри",
+    "price": 34.99,
+    "image": "productImages/sunglasses.webp",
+    "id": "159753468",
+    "color": "чорний"
+  },
+  {
+    "name": "Годинник",
+    "price": 89.99,
+    "image": "productImages/watch.webp",
+    "id": "369852147",
+    "color": "сріблястий"
+  }
+]

@@ -1,0 +1,53 @@
+.card{
+    width: 300px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    position: relative;
+    &__imageWrapper{
+        width: 300px;
+        height: 300px;
+        padding-top: 20px
+    }
+    &__image{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &__info{
+        padding: 10px 30px;
+        text-align: left;
+    }
+    &__name{
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    &__price{
+        font-weight: bold;
+        text-align: left;
+        margin-top: 10px;
+    }
+    &__priceAndButton{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    &__starIconPlus{
+        width: 20px;
+        position:absolute;
+        top: 10px;
+        right: 10px;
+        fill: red;
+    }
+    &__starIconRemove{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        fill: black;
+    }
+
+}

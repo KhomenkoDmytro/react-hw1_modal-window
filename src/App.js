@@ -1,11 +1,41 @@
 import './App.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Header from './components/Header/Header';
 import Button from './components/Button/Button';
 import Modal from './components/Modal/Modal';
+import ProductGroup from './components/ProductGroup/ProductGroup';
+import { getStateFromLocalStorage } from './utils/localStorageHelper';
+import { CART_LS_KEY, SELECT_LS_KEY } from './constants';
 
 function App() {
   const [isFirstModalOpen, setIsFirstModalOpen] = useState(false);
   const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
+  const [products, setProducts] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+
+  const getProducts = async () => {
+    try {
+      const productsResponse = await fetch('./products.json');
+      const products = await productsResponse.json();
+      products.map((product) => ({ ...product, isFavourite: false }));
+      setProducts(products);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    const productsFromLs = getStateFromLocalStorage(SELECT_LS_KEY);
+    if (!productsFromLs) {
+      getProducts();
+    } else if (productsFromLs) {
+      setProducts(productsFromLs);
+    }
+    const cartFromLs = getStateFromLocalStorage(CART_LS_KEY);
+    if (cartFromLs) {
+      setCartItems(cartFromLs);
+    }
+  }, []);
 
   const openFirstModal = () => {
     setIsFirstModalOpen(true);
@@ -65,6 +95,12 @@ function App() {
   );
   return (
     <div className="App">
+      <Header products={products} cartItems={cartItems}></Header>
+      <ProductGroup
+        products={products}
+        setCartItems={setCartItems}
+        setProducts={setProducts}
+      />
       <Button
         backgroundColor="red"
         onClick={() => {
